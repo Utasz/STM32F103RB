@@ -1,0 +1,42 @@
+23:44:38 **** Incremental Build of configuration Debug for project blinkLED ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MCU GCC Compiler'
+E:\Dropbox\Projekty\STM32\STM32F103RB\blinkLED\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32F1 -DSTM32F103RBTx -DSTM32 -DDEBUG -DSTM32F10X_MD -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/inc -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/CMSIS/core -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/CMSIS/device -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/syscalls.c'
+'Invoking: MCU GCC Compiler'
+E:\Dropbox\Projekty\STM32\STM32F103RB\blinkLED\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32F1 -DSTM32F103RBTx -DSTM32 -DDEBUG -DSTM32F10X_MD -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/inc -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/CMSIS/core -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/CMSIS/device -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/syscalls.d" -MT"src/syscalls.o" -o "src/syscalls.o" "../src/syscalls.c"
+'Finished building: ../src/syscalls.c'
+' '
+'Building file: ../src/system_stm32f10x.c'
+'Invoking: MCU GCC Compiler'
+E:\Dropbox\Projekty\STM32\STM32F103RB\blinkLED\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32F1 -DSTM32F103RBTx -DSTM32 -DDEBUG -DSTM32F10X_MD -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/inc -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/CMSIS/core -IE:/Dropbox/Projekty/STM32/STM32F103RB/blinkLED/CMSIS/device -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f10x.d" -MT"src/system_stm32f10x.o" -o "src/system_stm32f10x.o" "../src/system_stm32f10x.c"
+../src/system_stm32f10x.c: In function 'SetSysClock':
+../src/system_stm32f10x.c:284:37: warning: unused variable 'HSEStatus' [-Wunused-variable]
+   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+                                     ^
+../src/system_stm32f10x.c:284:17: warning: unused variable 'StartUpCounter' [-Wunused-variable]
+   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+                 ^
+'Finished building: ../src/system_stm32f10x.c'
+' '
+'Building target: blinkLED.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"E:\Dropbox\Projekty\STM32\STM32F103RB\blinkLED\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "blinkLED.elf" @"objects.list"  
+'Finished building target: blinkLED.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "blinkLED.elf" "blinkLED.bin"
+arm-none-eabi-size "blinkLED.elf"
+   text	   data	    bss	    dec	    hex	filename
+   1360	   1076	    288	   2724	    aa4	blinkLED.elf
+' '
+23:45:52 **** Incremental Build of configuration Debug for project blinkLED ****
+make all 
+make: Nothing to be done for `all'.
